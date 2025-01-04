@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+    background: url(https://publications.chitkara.edu.in/wp-content/uploads/2020/09/nmbr.jpg);
+    text-align: center;
+}
+p,h2{
+    background-color: aliceblue;
+}
+button{
+    color: rgb(4, 147, 147);background: url(https://publications.chitkara.edu.in/wp-content/uploads/2020/09/nmbr.jpg );
+}
+        </style>
+    </head>
+    <body>
+        <h2>WHICH IS THE LARGEST NUMBER?</h2>
+        <p>Enter numbers (comma-separated)<p>
+            <input type="text" id="non">
+            <button onclick="on()">Find Largest Number</button>
+            <p id="no"></p>
+            <script>
+                function on()
+                {
+                    var moon=document.getElementById("non").value;
+                    var part=moon.split(",");
+                    var pay=[];
+                    for(var i=0;i<part.length;i++){
+                        pay[i]=parseFloat(part[i])
+                    }
+                    var large=Math.max.apply(null,pay)
+                    document.getElementById("no").innerHTML="The largest number is... "+large+"!";
+                }
+            </script>
+    </body>
+</html>
